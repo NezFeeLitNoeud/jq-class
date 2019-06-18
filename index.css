@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vh;
+	height: 100vh;
+	/*border: 1px red solid;*/
+}
+
+.container {
+	/*border: 1px black solid;*/
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.col {
+	/*border: 1px purple solid;*/
+	width: 100%;
+	height: 100%;
+	flex:1;
+}
+
+.row {
+	/*border: 1px yellow solid;*/
+	width: 100%;
+	height: 20%;
+	flex:1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cercle {
+	border:1px black solid;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+}
+
+.carrer {
+	border:1px black solid;
+	height: 100px;
+	width: 100px;
+}
+
+.losange {
+	transform: rotate(45deg);
+	border:1px black solid;
+	height: 100px;
+	width: 100px;
+}
+
+#btn-on {
+	position: absolute;
+	left: 60%;
+	font-size: 20px;
+	height: 50px;
+	width: 100px;
+	top: 45%;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px black solid;
+	animation: moveOn 8s linear infinite;
+	background-color: darkred;
+	color: white;
+}
+
+#btn-off {
+	position: absolute;
+	left: 70%;
+	font-size: 20px;
+	height: 50px;
+	width: 100px;
+	top: 45%;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px black solid;
+	animation: moveOff 8s linear infinite;
+	background-color: darkred;
+	color: white;
+}
+.active {
+	background-color: darkred;
+}
+
+/*@keyframes fadeIn {
+	from { 
+		opacity: 0;
+		transform: rotate(0deg);
+		background-color: blue;  
+	}
+	to { 
+		opacity: 1;
+		transform: rotate(360deg);
+		background-color:darkred ; 
+	}
+}*/
+
+@keyframes moveOn {
+	0% {
+		top: 45%;
+		left: 60%;
+	}
+	25% {
+		top: 25%;
+		left: 75%;
+	}
+	50% {
+		top: 0%;
+		left: 50%;
+	}
+	75% {
+		top: 90%;
+		left: 90%;
+	} 
+	100% {
+		top: 90%;
+		left: 0%;
+	}
+}
+
+@keyframes moveOff {
+	0% {
+		top: 45%;
+		left: 70%;
+	}
+	25% {
+		top: 0%;
+		left: 90%;
+	}
+	50% {
+		top: 30%;
+		left: 50%;
+	}
+	75% {
+		top: 83%;
+		left: 79%;
+	} 
+	100% {
+		top: 83%;
+		left: 26%;
+	}
+}
