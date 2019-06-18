@@ -24,22 +24,21 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".carrer").click(function(){
 		let cID = this.id;
-		if($(this).hasClass("active") && $(".line" + cID).hasClass("active")){
+		console.log("line" + cID)
+		if($(this).hasClass("active")){
 			$(".line" + cID).removeClass("active");
 		} else {
 			$(".line" + cID).addClass("active")
-
 		}
 	})
 })
 
 $(document).ready(function(){
 	$(".losange").click(function(){
-		if($(this).hasClass("active") && $(".col" + this.id).hasClass("active")){
-			$(".col" + this.id).removeClass("active");
+		if($(this).hasClass("active")){
+			$(".col3").removeClass("active");
 		} else {
-			$(".col" + this.id).addClass("active")
-
+			$(".col3").addClass("active")
 		}
 	})
 	})
@@ -54,3 +53,6 @@ $(document).ready(function(){
 // 		}
 // 	})
 // })
+
+
+
